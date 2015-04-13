@@ -1,0 +1,26 @@
+﻿.jivo-divider {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 30px;
+  color: #222;
+  //font-weight: bold;
+  font-size: 20px;
+}
+
+.item.jivo-divider .badge {
+    top: 8px;
+}
+
+.jivo-item  h2{
+    font-weight:bold;
+    white-space:normal;
+}
+
+.jivo-item  p{
+    white-space:normal;
+}
+
+.jivo-item  .badge{
+    right: 35px;
+    top:50%;
+}
