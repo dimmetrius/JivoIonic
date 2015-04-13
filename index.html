@@ -20,18 +20,19 @@
     <script id="templates/sign-in.html" type="text/ng-template">
       <ion-view view-title="Sign-In">
         <div class="content has-header">
+          <img class="jivo-logo" src="logo.png">
           <div class="list list-inset">
             <label class="item item-input">
               <input type="text" placeholder="Email" ng-model="user.username">
             </label>
-            <br>
+
             <label class="item item-input">
               <input type="text" placeholder="Пароль" ng-model="user.password">
             </label>
           </div>
           <div class="padding">
             <button class="button button-block button-positive" ng-click="signIn(user)">ВОЙТИ</button>
-            <a class="button button-clear button-full button-positive">Забыли пароль</a>
+            <a class="button button-clear button-full button-positive" href="#/forgot-password">Забыли пароль</a>
           </div>
 
         </div>
@@ -42,13 +43,27 @@
       <ion-view view-title="Chatlist">
       
         <div class="bar bar-header bar-dark">
-          <h1 class="title">Клиенты <span class="badge badge-assertive">3</span> </h1>
+          <h1 class="title">Клиенты <span class="badge badge-assertive">{{items.length}}</span> </h1>
         </div>
         
         <ion-content class="has-header">
           <div class="list">
+          
+            <div ng-repeat="item in items">
+              <div class="item jivo-divider">
+                {{item.title}} <span class="badge badge-stable">{{item.count}}</span>
+              </div>
+              <a class="item jivo-item item-icon-right" ng-repeat="detail in item.details">
+                 <h2>{{detail.title}}</h2>
+                 <p>{{detail.text}}</p>
+                 <span class="badge" ng-class="detail.badge">{{detail.count}}</span>
+                 <i class="icon ion-chevron-right"></i>
+              </a>                           
+            </div>            
+            
+            <!--
             <div class="item jivo-divider">
-              Запросы чата <span class="badge">2</span>
+              Запросы чата <span class="badge badge-stable">10</span>
             </div> 
             
             <a class="item jivo-item item-icon-right" >
@@ -84,12 +99,13 @@
                <i class="icon ion-chevron-right"></i>
                <span class="badge badge-assertive center-content">2</span>
             </a>
+            -->
           </div>
         </ion-content>
         
         <div class="bar bar-footer bar-stable">
           <button class="button button-clear button-positive" ng-click="signOut()">Выход</button>
-          <div class="h1 title">JivoSite</div>
+          <div class="h1 title"><img class="title-image" src="logo.png" /></div>
           <div style = "position: absolute;top: 5px;right: 5px;bottom: 5px;">
           <label class="toggle toggle-balanced">
             <input type="checkbox">
@@ -100,23 +116,6 @@
           </div>
           <!--button class="button button-icon icon ion-navicon"></button-->
         </div>
-      </ion-view>
-    </script>
-
-    <script id="templates/forgot-password.html" type="text/ng-template">
-      <ion-view view-title="Forgot Password">
-        <ion-content padding="true">
-          <p>
-            Это всего лишь демка
-          </p>
-          <p>
-            There's no username/password, just click
-            the Sign-In button back a the sign-in view.
-          </p>
-          <p>
-            Return to <a href="#/sign-in">Sign-In</a>.
-          </p>
-        </ion-content>
       </ion-view>
     </script>
 
