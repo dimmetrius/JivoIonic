@@ -10,6 +10,10 @@
   top: 47px;
   border-top: 1px solid #929292;
   border-left: 1px solid #929292;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
