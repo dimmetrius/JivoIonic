@@ -52,12 +52,12 @@
   position: relative;
 }
 
-.jivo-item.hasIcon {
-  background-color: #f2f2f2;
-}
-
 .jivo-item .jivo-content {
   height: 65px;
+}
+
+.jivo-item.hasIcon {
+  background-color: #f2f2f2;
 }
 
 .item.jivo-item .jivo-badge {
@@ -79,8 +79,9 @@
   font-size: 14px;
   max-height: 35px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  white-space:normal;
   position: relative;
+  width: 80%;
 }
 
 .jivo-logo {
