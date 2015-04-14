@@ -1,28 +1,86 @@
-﻿.jivo-divider {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  min-height: 30px;
-  color: #222;
-  //font-weight: bold;
-  font-size: 20px;
+﻿.boldText{
+  font-weight: bold;
 }
 
-.item.jivo-divider .badge {
-    top: 8px;
+.jivo-arrow{
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  right: 20px;
+  top: 47px;
+  border-top: 1px solid #929292;
+  border-left: 1px solid #929292;
+  transform: rotate(135deg);
 }
 
-.jivo-item  h2{
-    font-weight:bold;
-    white-space:normal;
+.jivo-badge {
+  color: #FFFFFF;
+  position: relative;
+  display: inline-block;
+  border-radius: 500px;
+  text-align: center;
+  font-size: 16px;
+  padding: 2px 8px;
 }
 
-.jivo-item  p{
-    white-space:normal;
+.jivo-badge.gray {
+  background: #f2f2f2;
+  color: #bfbfbf;
 }
 
-.jivo-item  .badge{
-    right: 35px;
-    top:35%;
+.jivo-badge.red {
+  background: red;
+}
+
+.jivo-badge.green {
+  background: green;
+}
+
+.jivo-divider { 
+  padding: 15px 10px 5px 10px;
+  font-size: 18px;
+  border-bottom: 1px #ddd solid;
+}
+
+.item.jivo-divider .jivo-badge {
+  margin-left: 5px;
+}
+
+.jivo-item{ 
+  border-bottom: 1px #ddd solid; 
+  padding: 10px;
+  position: relative;
+}
+
+.jivo-item.hasIcon {
+  background-color: #f2f2f2;
+}
+
+.jivo-item .jivo-content {
+  height: 65px;
+}
+
+.item.jivo-item .jivo-badge {
+  position: absolute;
+  top: 41px;
+  right: 35px;
+}
+
+.item.jivo-item .jivo-title {
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item.jivo-item .jivo-text {
+  margin-top: 5px;
+  color: #808080;
+  font-size: 14px;
+  max-height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
 }
 
 .jivo-logo {
@@ -30,10 +88,10 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
-  width:200px;
+  width:150px;
 }
 
-.title-image {
+.jivo-footer-image {
     margin-top: 8px;
     height: 27px;
 }
